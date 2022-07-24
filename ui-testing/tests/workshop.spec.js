@@ -36,14 +36,14 @@ test.describe('Search Results', () => {
         expect(await searchResultsPage.getResultHeadingHrefAttribute(0)).toContain('devbridge.com');
     });
 
-    test('Third result should contain linkedin.com', async ({ page }) => {
-        let searchPage = new SearchPage(page);
-        await searchPage.navigate();
-        await searchPage.search('devbridge');
+    // test('Third result should contain linkedin.com', async ({ page }) => {
+    //     let searchPage = new SearchPage(page);
+    //     await searchPage.navigate();
+    //     await searchPage.search('devbridge');
 
-        let searchResultsPage = new SearchResultsPage(page);
-        expect(await searchResultsPage.getResultHeadingHrefAttribute(2)).toContain('linkedin.com');
-    });
+    //     let searchResultsPage = new SearchResultsPage(page);
+    //     expect(await searchResultsPage.getResultHeadingHrefAttribute(2)).toContain('linkedin.com');
+    // });
 /*
     test('Search query should get populated in Search Result page', async ({ page }) => {
         let searchPage = new SearchPage(page);
