@@ -24,9 +24,6 @@ data.forEach(version => {
       await page.locator('#number1Field').type('2');
       await page.locator('#number2Field').type('3');
       await page.selectOption('#selectOperationDropdown', {label: 'Concatenate'});
-
-      await expect(page.locator('#calculateButton'), '"Calculate" button is hidden.').not.toBeHidden();
-
       await page.locator('#calculateButton').click();
   
       await expect(page.locator('#numberAnswerField')).toHaveValue('23');
